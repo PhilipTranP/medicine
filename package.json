@@ -1,0 +1,36 @@
+{
+  "name": "medicine",
+  "version": "1.0.0",
+  "description": "Node.js framework without side effects",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon src/app.js --exec babel-node --presets es2015,babel-preset-stage-3",
+    "lint": "eslint"
+  },
+  "author": "Erik Duindam",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2016": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-node6": "^11.0.0",
+    "babel-preset-node7": "^1.5.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.6.1",
+    "jest": "^20.0.4",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "lodash-fp": "^0.10.4"
+  }
+}
