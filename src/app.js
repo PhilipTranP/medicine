@@ -1,11 +1,14 @@
 import { createServer } from 'http';
 
 import { route } from './lib/router';
-import homepage from './controllers/homepage';
+import users from './routes/users';
+import saveUsers from './routes/saveUsers';
 
 export const httpServer = createServer();
 export const get = route('GET')(httpServer);
+export const post = route('POST')(httpServer);
 
-get('/')(homepage);
+get('/')(saveUsers);
+post('/')(users);
 
 httpServer.listen(1337);

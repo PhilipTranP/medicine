@@ -19,7 +19,7 @@ const dataHandler = (controller, response) => {
   };
 };
 
-const requestHandler = (method, path, controller) => (request, response) => {
+export const requestHandler = (method, path, controller) => (request, response) => {
   if (method !== request.method) return;
   if (path !== request.url) return;
 
@@ -34,8 +34,3 @@ const requestHandler = (method, path, controller) => (request, response) => {
 export const route = method => server => path => (controller) => {
   server.on('request', requestHandler(method, path, controller));
 };
-
-export const connect = servicesToProps => controller => services => controller({
-  ...services,
-  ...servicesToProps,
-});
